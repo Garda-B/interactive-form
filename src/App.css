@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
-}
+@media only screen and (min-width: 1220px) {
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .wrapper {
+    display: flex;
+    position: relative;
+    line-height: 0%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+    line-height: 0%;
+    /*to remove white space from under image*/
+  }
+
+
+  .cardfront {
+    position: absolute;
+    color: white;
+    top: 100px;
+    left: 190px;
+    width: 350px;
+
+  }
+
+
+  .cardback {
+    position: absolute;
+    top: 320px;
+    left: 280px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cardlogo {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+
+}
+
+.number {
+  position: absolute;
+  font-size: 20px;
+  top: 120px;
+  left: 35px;
+  letter-spacing: 3px;
+}
+
+.cardname {
+  position: absolute;
+  top: 170px;
+  left: 35px;
+  letter-spacing: 3px;
+
+}
+
+.expirationdate {
+  position: absolute;
+  top: 170px;
+  left: 260px;
+  letter-spacing: 3px;
+
+}
+
+.cardbackcvc {
+  position: absolute;
+  top: 95px;
+  left: 270px;
+  letter-spacing: 3px;
   color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.formwrapper {
+  margin: 150px 740px;
+  margin-right: 20px;
+  line-height: 40px;
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px rgb(117, 117, 139);
+  border-radius: 6px;
+
+}
+
+input:hover {
+background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+border-radius: 6px;
+border: 2px solid transparent;
+cursor: pointer;
+
+}
+
+.expdatecvc {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.label {
+  font-size: 12px;
+}
+
+.smallinput {
+  width: 30px;
+
+}
+
+.inputflex {
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.cvcinput {
+  margin-left: 12px;
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: 8px;
+  width: 100%;
+  background-color: hsl(278, 68%, 11%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/*this removes the little scrollers from the number input fields*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.errormessage {
+  font-size: 12px;
+  color: hsl(0, 100%, 66%)
+}
+
+.redborder {
+  border-color: hsl(0, 100%, 66%);
+
+}
+
+.displaynone {
+  display: none;
+
+}
+
+@media only screen and (max-width: 1219px) {
+
+  .wrapper {
+    display: flex;
+    position: relative;
+    line-height: 0%;
+    overflow: auto;
+    max-width: 100%;
+   
+
+
+    /*to remove white space from under image*/
   }
-  to {
-    transform: rotate(360deg);
+
+  body {
+    background-image: url(images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto;
+    overflow: var(--button-overflow)
+    
   }
+
+  .cardback {
+    width: 70px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1;
+  }
+
+  .cardback img {
+    position: relative;
+    width: 320px;
+    
+  }
+
+  .cardfront {
+    position: absolute;
+    color: white;
+    top: 140px;
+    left: 20px;
+    z-index: 2; /*which one overlay the other*/
+
+  }
+
+  .cardfront > img {
+    width: 320px !important;
+    
+  } 
+
+  .cardlogo {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    width: 15px;
+
+  }
+
+  .number {
+    position: absolute;
+    font-size: 20px;
+    top: 110px;
+    left: 25px;
+    letter-spacing: 3px;
+  }
+
+  .cardname {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    letter-spacing: 3px;
+
+  }
+
+  .expirationdate {
+    position: absolute;
+    top: 150px;
+    left: 245px;
+    letter-spacing: 3px;
+
+  }
+
+  .cardbackcvc {
+    position: absolute;
+    top: 90px;
+    left: 250px;
+    letter-spacing: 3px;
+    color: white;
+
+  }
+
+  .formwrapper {
+  margin: 350px auto;  
+  line-height: 40px;
+    
+}
+
+
+
 }
