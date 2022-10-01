@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://github.com/Garda-B/interactive-form.git
+- Live Site URL: https://garda-b.github.io/interactive-form/
 
 ## My process
 
